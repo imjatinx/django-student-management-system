@@ -10,6 +10,8 @@ urlpatterns = [
     path('doLogin/', views.doLogin, name="doLogin"),
     path('get_user_details/', views.get_user_details, name="get_user_details"),
     path('logout_user/', views.logout_user, name="logout_user"),
+
+    # URLS for HOD
     path('admin_home/', HodViews.admin_home, name="admin_home"),
     path('add_staff/', HodViews.add_staff, name="add_staff"),
     path('add_staff_save/', HodViews.add_staff_save, name="add_staff_save"),
@@ -60,7 +62,6 @@ urlpatterns = [
     path('admin_profile_update/', HodViews.admin_profile_update, name="admin_profile_update"),
     
 
-
     # URLS for Staff
     path('staff_home/', StaffViews.staff_home, name="staff_home"),
     path('staff_take_attendance/', StaffViews.staff_take_attendance, name="staff_take_attendance"),
@@ -79,7 +80,8 @@ urlpatterns = [
     path('staff_add_result/', StaffViews.staff_add_result, name="staff_add_result"),
     path('staff_add_result_save/', StaffViews.staff_add_result_save, name="staff_add_result_save"),
 
-    # URSL for Student
+
+    # URLS for Student
     path('student_home/', StudentViews.student_home, name="student_home"),
     path('student_view_attendance/', StudentViews.student_view_attendance, name="student_view_attendance"),
     path('student_view_attendance_post/', StudentViews.student_view_attendance_post, name="student_view_attendance_post"),

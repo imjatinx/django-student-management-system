@@ -115,7 +115,6 @@ def add_staff_save(request):
             return redirect('add_staff')
 
 
-
 def manage_staff(request):
     staffs = Staffs.objects.all()
     context = {
@@ -240,6 +239,7 @@ def edit_course_save(request):
 
 def delete_course(request, course_id):
     course = Courses.objects.get(id=course_id)
+    print(course)
     try:
         course.delete()
         messages.success(request, "Course Deleted Successfully.")
@@ -497,6 +497,8 @@ def add_subject(request):
         "courses": courses,
         "staffs": staffs
     }
+
+    print(staffs)
     return render(request, 'hod_template/add_subject_template.html', context)
 
 
